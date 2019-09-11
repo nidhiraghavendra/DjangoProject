@@ -1,0 +1,13 @@
+{% extends 'Blog/base.html' %}
+{% block content %}
+            <form method='POST'>
+                <!-- action need not be mentioned, urls takes care of this -->
+                {% csrf_token %}
+                
+                <!-- form context passed in signup is shown here as a page -->
+                {{ form.as_p }}
+
+                <button class="btn" type="submit">Submit</button>
+
+            </form>
+{% endblock %}
